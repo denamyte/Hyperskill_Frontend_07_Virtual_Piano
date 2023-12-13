@@ -294,9 +294,12 @@ files:
           /*padding: 40% 0 0;*/
       }
     learner_created: true
+  - name: src/js/script.js
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/557/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Wed, 13 Dec 2023 17:13:54 UTC"
-record: -1
+  time: "Wed, 13 Dec 2023 19:49:56 UTC"
+record: 2

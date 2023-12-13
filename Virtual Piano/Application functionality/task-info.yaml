@@ -337,6 +337,55 @@ files:
           await new Test().runTests()
       }, 30000)
     learner_created: false
+  - name: src/css/style.css
+    visible: true
+    text: |-
+      body {
+          background-color: #366141;
+      }
+      
+      main {
+          width: 98vw;
+          height: 98vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      kbd {
+          background-color: white;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 12vh 0 0;
+          height: 20vh;
+          width: 50px;
+          border: 2px solid #929292;
+          text-align: center;
+      }
+    learner_created: true
+  - name: src/js/script.js
+    visible: true
+    text: |-
+      const keys = {}
+      
+      function init() {
+          document.querySelectorAll('kbd')
+              .forEach(node => keys[`Key${node.innerText}`] = node.innerText);
+      
+          document.addEventListener("keypress", ev => {
+              const msg = ev.code in keys
+                  ? `The '${keys[ev.code]}' key is pressed.`
+                  : "Unknown key is pressed."
+              console.log(msg)
+          });
+      }
+      
+      
+      init()
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/558/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 13 Dec 2023 19:50:15 UTC"
+record: 3
