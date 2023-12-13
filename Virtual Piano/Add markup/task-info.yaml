@@ -94,9 +94,12 @@ files:
       </body>
       </html>
     learner_created: false
+  - name: src/css/style.css
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/556/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: "Wed, 13 Dec 2023 10:42:22 UTC"
-record: -1
+record: 1

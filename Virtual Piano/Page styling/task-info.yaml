@@ -266,6 +266,37 @@ files:
       }, 30000)
     
     learner_created: false
+  - name: src/css/style.css
+    visible: true
+    text: |-
+      body {
+          background-color: #366141;
+      }
+      
+      main {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .container {
+      }
+      
+      kbd {
+          background-color: white;
+          display: inline-block;
+          height: 150px;
+          width: 50px;
+          border: 2px solid #929292;
+          text-align: center;
+          /*padding: 40% 0 0;*/
+      }
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/557/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 13 Dec 2023 17:13:54 UTC"
 record: -1

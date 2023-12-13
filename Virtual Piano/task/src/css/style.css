@@ -1,0 +1,22 @@
+body {
+    background-color: #366141;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+kbd {
+    background-color: white;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 12vh 0 0;
+    height: 20vh;
+    width: 50px;
+    border: 2px solid #929292;
+    text-align: center;
+}
