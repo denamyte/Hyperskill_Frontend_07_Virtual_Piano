@@ -326,6 +326,95 @@ files:
           await new Test().runTests()
       }, 30000)
     learner_created: false
+  - name: src/css/style.css
+    visible: true
+    text: |-
+      body {
+          background-color: #366141;
+      }
+      
+      main {
+          width: 98vw;
+          height: 98vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      kbd {
+          background-color: white;
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 12vh 0 0;
+          height: 20vh;
+          width: 50px;
+          border: 2px solid #929292;
+          text-align: center;
+      }
+    learner_created: true
+  - name: src/audio/F.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/A.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/J.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/G.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/H.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/D.mp3
+    visible: true
+    learner_created: true
+  - name: src/js/script.js
+    visible: true
+    text: |-
+      // const keys = {}
+      const audios = {}
+      
+      function init() {
+          document.querySelectorAll('kbd')
+              .forEach(node => {
+                  const letter = node.innerText;
+                  const key = `Key${letter}`;
+                  // keys[key] = letter;
+                  audios[`Key${letter}`] = new Audio(`audio/${letter}.mp3`);
+                  node.addEventListener("click", ev => audios[key].play());
+              });
+      
+          // document.addEventListener("keypress", ev => ev.code in keys && playSound(keys[ev.code]));
+          document.addEventListener("keypress", ev => {
+              ev.code in audios && audios[ev.code].play();
+          })
+      }
+      
+      init()
+    learner_created: true
+  - name: src/audio/S.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/T.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/E.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/Y.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/U.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/W.mp3
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/559/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 14 Dec 2023 17:00:52 UTC"
 record: -1

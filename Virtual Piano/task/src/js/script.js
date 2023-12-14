@@ -1,16 +1,15 @@
-const keys = {}
+const keys = {};
+const play = keyCode => keyCode in keys && new Audio(`audio/${keys[keyCode]}.mp3`).play();
 
 function init() {
     document.querySelectorAll('kbd')
-        .forEach(node => keys[`Key${node.innerText}`] = node.innerText);
+        .forEach(node => {
+            const keyCode = `Key${node.innerText}`;
+            keys[keyCode] = node.innerText;
+            node.addEventListener("click", ev => play(keyCode));
+        });
 
-    document.addEventListener("keypress", ev => {
-        const msg = ev.code in keys
-            ? `The '${keys[ev.code]}' key is pressed.`
-            : "Unknown key is pressed."
-        console.log(msg)
-    });
+    document.addEventListener("keypress", ev => play(ev.code))
 }
 
-
-init()
+init();

@@ -383,6 +383,27 @@ files:
       
       init()
     learner_created: true
+  - name: src/audio/D.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/J.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/G.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/H.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/F.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/A.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/S.mp3
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/558/implement#comment
 status: Solved
 feedback:
