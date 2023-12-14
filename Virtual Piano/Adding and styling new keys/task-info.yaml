@@ -508,6 +508,129 @@ files:
           await new Test().runTests()
       }, 30000)
     learner_created: false
+  - name: src/css/style.css
+    visible: true
+    text: |-
+      body {
+          background-color: #366141;
+      }
+      
+      main {
+          width: 98vw;
+          height: 98vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .container {
+          position: relative;
+      }
+      
+      kbd {
+          display: inline-block;
+          box-sizing: border-box;
+          text-align: center;
+      }
+      
+      .white-keys {
+          /*border: 1px dashed red;*/
+      
+      }
+      
+      .white-keys kbd {
+          background-color: white;
+          padding: 14vh 0 0;
+          height: 20vh;
+          width: 50px;
+          border: 2px solid #929292;
+          font-weight: bold;
+          font-size: 1.2em;
+      }
+      
+      .black-keys {
+          /*border: 1px dashed red;*/
+      
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+      
+      .black-keys kbd {
+          background-color: black;
+          color: white;
+          height: 12vh;
+          width: 30px;
+          margin-left: 15px;
+          padding: 6vh 0 0;
+      }
+      
+      .black-keys kbd:nth-child(1) {
+          margin-left: 34px;
+      }
+      
+      .black-keys kbd:nth-child(3) {
+          margin-left: 65px;
+      }
+    learner_created: true
+  - name: src/audio/W.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/A.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/F.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/Y.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/H.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/D.mp3
+    visible: true
+    learner_created: true
+  - name: src/js/script.js
+    visible: true
+    text: |-
+      const keys = {};
+      const play = keyCode => keyCode in keys && new Audio(`audio/${keys[keyCode]}.mp3`).play();
+      
+      function init() {
+          document.querySelectorAll('kbd')
+              .forEach(node => {
+                  const keyCode = `Key${node.innerText}`;
+                  keys[keyCode] = node.innerText;
+                  node.addEventListener("click", ev => play(keyCode));
+              });
+      
+          document.addEventListener("keypress", ev => play(ev.code))
+      }
+      
+      init();
+    learner_created: true
+  - name: src/audio/U.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/S.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/E.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/J.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/G.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/T.mp3
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Thu, 14 Dec 2023 20:45:03 UTC"
 record: -1

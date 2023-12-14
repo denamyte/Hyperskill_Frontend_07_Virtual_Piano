@@ -352,24 +352,6 @@ files:
           text-align: center;
       }
     learner_created: true
-  - name: src/audio/F.mp3
-    visible: true
-    learner_created: true
-  - name: src/audio/A.mp3
-    visible: true
-    learner_created: true
-  - name: src/audio/J.mp3
-    visible: true
-    learner_created: true
-  - name: src/audio/G.mp3
-    visible: true
-    learner_created: true
-  - name: src/audio/H.mp3
-    visible: true
-    learner_created: true
-  - name: src/audio/D.mp3
-    visible: true
-    learner_created: true
   - name: src/js/script.js
     visible: true
     text: |-
@@ -394,9 +376,6 @@ files:
       
       init()
     learner_created: true
-  - name: src/audio/S.mp3
-    visible: true
-    learner_created: true
   - name: src/audio/T.mp3
     visible: true
     learner_created: true
@@ -412,9 +391,33 @@ files:
   - name: src/audio/W.mp3
     visible: true
     learner_created: true
+  - name: src/audio/J.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/H.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/A.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/D.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/G.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/F.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/S.mp3
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/559/implement#comment
-status: Solved
+status: Failed
 feedback:
-  message: Congratulations!
-  time: "Thu, 14 Dec 2023 17:00:52 UTC"
-record: -1
+  message: |-
+    Error: Wrong answer in test #3
+
+    Div with class 'container' should contain 7 elements, found: 2
+  time: "Thu, 14 Dec 2023 20:44:38 UTC"
+record: 4
