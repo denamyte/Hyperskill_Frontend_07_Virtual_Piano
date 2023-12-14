@@ -573,16 +573,10 @@ files:
           margin-left: 65px;
       }
     learner_created: true
-  - name: src/audio/W.mp3
-    visible: true
-    learner_created: true
   - name: src/audio/A.mp3
     visible: true
     learner_created: true
   - name: src/audio/F.mp3
-    visible: true
-    learner_created: true
-  - name: src/audio/Y.mp3
     visible: true
     learner_created: true
   - name: src/audio/H.mp3
@@ -610,13 +604,7 @@ files:
       
       init();
     learner_created: true
-  - name: src/audio/U.mp3
-    visible: true
-    learner_created: true
   - name: src/audio/S.mp3
-    visible: true
-    learner_created: true
-  - name: src/audio/E.mp3
     visible: true
     learner_created: true
   - name: src/audio/J.mp3
@@ -626,6 +614,18 @@ files:
     visible: true
     learner_created: true
   - name: src/audio/T.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/E.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/Y.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/U.mp3
+    visible: true
+    learner_created: true
+  - name: src/audio/W.mp3
     visible: true
     learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement#comment
