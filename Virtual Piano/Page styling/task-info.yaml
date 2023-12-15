@@ -297,7 +297,7 @@ files:
   - name: src/js/script.js
     visible: true
     learner_created: true
-feedback_link: https://hyperskill.org/projects/101/stages/557/implement#comment
+feedback_link: https://hyperskill.org/learn/step/9023#comment
 status: Solved
 feedback:
   message: Congratulations!

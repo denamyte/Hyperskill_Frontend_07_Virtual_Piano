@@ -412,12 +412,6 @@ files:
   - name: src/audio/S.mp3
     visible: true
     learner_created: true
-feedback_link: https://hyperskill.org/projects/101/stages/559/implement#comment
-status: Failed
-feedback:
-  message: |-
-    Error: Wrong answer in test #3
-
-    Div with class 'container' should contain 7 elements, found: 2
-  time: "Thu, 14 Dec 2023 20:44:38 UTC"
+feedback_link: https://hyperskill.org/learn/step/9025#comment
+status: Solved
 record: 4
