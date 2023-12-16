@@ -1,2 +1,5 @@
 content:
   - Array searching
+  - Array transforming
+  - Array reducing
+  - Array slicing
