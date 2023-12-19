@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: "The parseInt() function must take exactly two values, no more, no less."
+  - text: "parseFloat() has only one function argument: a string type value that will\
+    \ be parsed."
+  - text: The isFinite() function throws an error if the function's argument is set
+      to NaN.
+  - text: The isNaN() function was created to simplify writing NaN == NaN.
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/24021#comment
+status: Solved
+record: -1
+local_check: false
