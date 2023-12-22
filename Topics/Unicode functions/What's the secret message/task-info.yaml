@@ -1,0 +1,19 @@
+type: code
+custom_name: What's the secret message?
+files:
+  - name: main.js
+    visible: true
+    text: "function decodeSecretMessage(codePoints) {\n  /* Do not change code above\
+    \ */ \n\n  //Write your code here\n\n  /* Do not change code below */\n}\nprocess.stdin.setEncoding('utf8');\n\
+    \nlet input = '';\n\nprocess.stdin.on('data', (data) => {\n  input += data;\n\
+    });\n\nprocess.stdin.on('end', () => {\n  const codePoints = input.trim().split(/,\\\
+    s*/).map(Number);\n  const decodedMessage = decodeSecretMessage(codePoints);\n\
+    \  process.stdout.write(decodedMessage);\n});"
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31444#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 20 Dec 2023 12:22:09 UTC"
+record: -1
+submission_language: javascript

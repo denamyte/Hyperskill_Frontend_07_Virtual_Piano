@@ -6,3 +6,5 @@ content:
   - Array Add Remove elements
   - Scope of variables
   - Builtin JS Functions
+  - Unicode functions
+  - Function constructor

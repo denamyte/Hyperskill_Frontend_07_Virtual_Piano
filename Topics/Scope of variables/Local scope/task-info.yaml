@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-  - text: A scope created for a new variable.
-  - text: Such a scope that its variables are accessible from anywhere in the program.
-  - text: A scope created for a new block of code.
-  - text: Such a scope that its variables are accessible only outside the function.
+  - text: A scope with its variables accessible only outside the function
+  - text: A scope with its variables accessible from anywhere in the program
+  - text: A scope created for a new block of code
+  - text: A scope created for a new variable
 files:
   - name: main.js
     visible: true

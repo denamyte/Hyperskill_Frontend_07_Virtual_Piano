@@ -1,0 +1,29 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    text: |-
+      function getCharCode(character) {
+        // Write your code here
+      
+      }
+      
+      /* Do not change code below */
+      
+      process.stdin.setEncoding('utf8');
+      
+      process.stdin.on('data', (data) => {
+        const inputCharacter = data.trim();
+      
+        const codeUnitValue = getCharCode(inputCharacter);
+      
+        process.stdout.write(codeUnitValue.toString());
+      });
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31445#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 20 Dec 2023 12:00:53 UTC"
+record: -1
+submission_language: javascript

@@ -1,0 +1,31 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    text: |-
+      function getCodePoints(str) {
+        var codePoints = [];
+        /* Do not change code above */
+      
+        //Write your code here
+      
+        /* Do not change code below */
+        return codePoints;
+      }
+      
+      process.stdin.once('data', (input) => {
+        const inputString = input.toString().trim();
+        const result = getCodePoints(inputString);
+      
+        console.log(result);
+      
+        process.stdin.pause();
+      });
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31449#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 20 Dec 2023 12:39:01 UTC"
+record: -1
+submission_language: javascript

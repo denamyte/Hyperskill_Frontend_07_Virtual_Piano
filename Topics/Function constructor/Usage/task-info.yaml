@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-  - text: Created without a declaration keyword
-  - text: Local
-  - text: Created with let
-  - text: Global
+  - text: For object inheritance
+  - text: For comparing objects
+  - text: To create similar objects
+  - text: For initializing multiple objects in a single call
 files:
   - name: main.js
     visible: true
@@ -12,7 +12,7 @@ files:
       // You can experiment here, it won’t be checked
     
     learner_created: false
-feedback_link: https://hyperskill.org/learn/step/9775#comment
+feedback_link: https://hyperskill.org/learn/step/9973#comment
 status: Solved
 record: -1
 local_check: false
