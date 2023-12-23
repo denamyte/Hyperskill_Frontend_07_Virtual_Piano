@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: Using <code>Object.protoype</code>
+  - text: Using <code>hasOwnProperty</code>
+  - text: ' Using <code>valueOf</code>'
+  - text: ' Using <code>__proto__</code> property'
+  - text: <code>Object.create()</code>
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/30507#comment
+status: Solved
+record: -1
+local_check: false

@@ -1,0 +1,19 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    text: |-
+      setTimeout(() => console.log("timeout"));
+      
+      Promise.resolve()
+        .then(() => console.log("promise"));
+      
+      console.log("code");
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12467#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 23 Dec 2023 21:08:18 UTC"
+record: -1
+submission_language: javascript

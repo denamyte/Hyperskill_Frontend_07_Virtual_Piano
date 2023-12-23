@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: By assigning a new value to the property in the child object
+  - text: Using <code>Object.create()</code> and using dot literals
+  - text: By modifying the prototype directly
+  - text: By using the <code>updatePrototype()</code> method
+  - text: ' By using the <code>__proto__</code> property'
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/30510#comment
+status: Solved
+record: -1
+local_check: false

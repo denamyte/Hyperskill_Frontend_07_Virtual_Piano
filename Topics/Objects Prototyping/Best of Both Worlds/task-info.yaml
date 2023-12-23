@@ -1,0 +1,25 @@
+type: code
+custom_name: Best of Both Worlds!
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      const world1 = {
+          name: "Miley Stewart",
+          greet: function() {
+              console.log(`Hello, this is ${this.name}!`);
+          }
+      };
+      
+      /* Do not change code above */
+      
+      // write your code here
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/30515#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 23 Dec 2023 22:22:35 UTC"
+record: -1
+submission_language: javascript

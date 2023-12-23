@@ -8,3 +8,5 @@ content:
   - Builtin JS Functions
   - Unicode functions
   - Function constructor
+  - Event Loop
+  - Objects Prototyping

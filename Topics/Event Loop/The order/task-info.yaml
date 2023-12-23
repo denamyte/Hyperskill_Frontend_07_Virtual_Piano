@@ -1,0 +1,23 @@
+type: sorting
+options:
+  - First block
+  - Second block
+  - Fourth block
+  - Fifth block
+  - Third block
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12466#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

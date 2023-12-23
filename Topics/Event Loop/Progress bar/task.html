@@ -1,0 +1,78 @@
+<h2>Progress bar</h2>
+<div class="step-text">
+<p></p>
+<p>You are working on a project and you were given a task to create a progress bar illustrating the progress of the script execution. You didn't know exactly how to do this, so you asked your colleagues for help. They gave you several code samples, but only one of them is correct. </p>
+<p>Choose the correct one:</p>
+<p>A)</p>
+<pre><code class="language-html">&lt;div id="progress"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+
+  function create() {
+    for (let i = 0; i &lt; 100; i++) {
+      i++;
+      document.getElementById("progress").innerHTML = i + "%";
+    }
+  }
+
+  create();
+&lt;/script&gt;</code></pre>
+<p>B)</p>
+<pre><code class="language-html">&lt;div id="progress"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  let i = 0;
+  function calculate() {
+    do{
+      i++;
+      document.getElementById("progress").innerHTML = i + "%";
+
+    } while (i % 10 != 0);
+  
+    if (i &lt; 100) {
+      setTimeout(function() { calculate(); }, 1000);
+    }
+  }
+
+  calculate();
+&lt;/script&gt;</code></pre>
+<p>C)</p>
+<pre><code class="language-html">&lt;div id="progress"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  let i = 0;
+
+  function load() {
+
+    do {
+      i++;
+      progress.innerHTML = i + "%";
+    } while (i % 10 != 0);
+
+    if (i &lt; 100) {
+      queueMicrotask(load());
+    }
+
+  }
+
+  load();
+&lt;/script&gt;</code></pre>
+<p>D)</p>
+<pre><code class="language-html">&lt;div id="progress"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  let i = 0;
+
+  function highlight() {
+
+    do {
+      i++;
+      progress.innerHTML = i + "%";
+      queueMicrotask(highlight());
+    } while (i % 10 != 0);
+
+  }
+
+  highlight();
+&lt;/script&gt;</code></pre>
+</div>

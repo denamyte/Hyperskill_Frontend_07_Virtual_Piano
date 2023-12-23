@@ -1,0 +1,26 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    text: |-
+      const person = {
+        name: 'Jane Smith',
+        age: 25,
+      };
+      
+      const student = Object.create(person) {
+        major: 'Computer Science',
+        getDetails() {
+          console.log(`Name: ${this.name}, Age: ${this.age}, Major: ${this.major}`);
+        }
+      };
+      
+      student.getDetails();
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/30514#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 23 Dec 2023 22:16:59 UTC"
+record: -1
+submission_language: javascript

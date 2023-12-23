@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: inherit properties and methods from other objects
+  - text: duplicate all properties of the base object manually
+  - text: create a new object with completely unique properties and methods
+  - text: generate a standalone object
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/30506#comment
+status: Solved
+record: -1
+local_check: false
