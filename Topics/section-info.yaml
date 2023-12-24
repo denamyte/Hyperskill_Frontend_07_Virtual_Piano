@@ -10,3 +10,5 @@ content:
   - Function constructor
   - Event Loop
   - Objects Prototyping
+  - Static methods and properties
+  - Classes VS Prototypes

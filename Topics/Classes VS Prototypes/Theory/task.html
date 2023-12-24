@@ -1,0 +1,112 @@
+<h2>Classes VS Prototypes</h2>
+<div class="step-text">
+<p>In Object-Oriented Programming (OOP), a <strong>class</strong> is a key concept, especially for inheritance. Classes serve as templates for creating objects (instances) in many OOP languages, similar to prototypes in JavaScript. Although JavaScript mainly uses <strong>prototypes</strong> for inheritance, ECMAScript 2015 (ES6) added support for <strong>class-based inheritance</strong> by introducing the <code class="language-javascript">class</code> keyword and class-like syntax. However, it's important to understand that this support is still implemented using prototypes. That means, when we use classes, behind the scenes, we are still working with prototypes. You can think of it as simplifying the code's structure to make it more familiar and user-friendly for developers to work with object-oriented programming concepts. Let's take a look at the differences between their usage in the following sections.</p>
+<h5 id="prototypes">Prototypes</h5>
+<p>Prototypes are good old fellows in JavaScript. We use prototyping as the primary method to create templates that define properties and methods for objects to be replicated. You are probably familiar with the concept of prototyping (using object literals) in previous topics. In JavaScript, there is another common practice for establishing prototypal linkage between parent and child objects by using <strong>function constructors</strong>.</p>
+<p>In this topic, we will primarily focus on using function constructors as prototypes. This is because when you use object literals, you need to define each property of each object line by line. This can make your code messy and repetitive, especially when dealing with many similar objects. That's why using function constructors is a better choice. It will also make it easier for us to see how they are similar to 'classes', which we'll explore in the next section.</p>
+<pre><code class="language-javascript">function Person(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    
+    this.getFulName = function() {
+        return firstName + " " + lastName;
+    };
+}</code></pre>
+<p>Here is our example constructor function named <code class="language-javascript">Person</code>, which will behave as an object template for each object we will create based on it. It takes two parameters, <code class="language-javascript">firstName</code> and <code class="language-javascript">lastName</code>. Inside the constructor function, we use these parameters to define the properties <code class="language-javascript">this.firstName</code> and <code class="language-javascript">this.lastName</code> to store their values in the created objects. We also create the method <code class="language-javascript">this.getFullName()</code> to return the full name by concatenating these values.</p>
+<p>Here's an example instance created from this prototype:</p>
+<pre><code class="language-javascript">let person1 = new Person("John", "Doe");
+
+// Accessing properties
+console.log(person1.firstName); // "John"
+console.log(person1.lastName);  // "Doe"
+
+console.log(person1.getFullName()); // "John Doe"</code></pre>
+<p>In this example, <code class="language-javascript">person1</code> is an instance of the <code class="language-javascript">Person</code> object, and it is created by using the <code class="language-javascript">new</code> keyword. It has its own <code class="language-javascript">firstName</code> and <code class="language-javascript">lastName</code> properties, and you can call the <code class="language-javascript">getFullName()</code> method on the instance to get their full names.</p>
+<h5 id="the-prototype-property">The 'prototype' property</h5>
+<p>Let's imagine a scenario where you have to create numerous object instances based on a prototype, and you want to save memory at the same time. However, as the structure of your base object becomes more complex, JavaScript may need to follow the prototype chain to access properties and methods in the created child objects. Therefore, creating a new layer of inheritance, like extending the base object (our constructor function in this case), can be helpful. We can manage this using <code class="language-javascript">prototype</code> property, as in the following example:</p>
+<pre><code class="language-javascript">Person.prototype.greet = function() {
+  console.log('Hello, ' + this.firstName + ' ' + this.lastName + '!');
+};</code></pre>
+<p>Here, we have a <code class="language-javascript">greet</code> method outside the function constructor that outputs a greeting message by concatenating <code class="language-javascript">firstName</code> and <code class="language-javascript">lastName</code> properties. For all instances created from <code class="language-javascript">Person</code> to access and share this method, we have denoted the <code class="language-javascript">prototype</code> property using dot notation between the constructor function's and the method's name.</p>
+<pre><code class="language-javascript">person1.greet(); // "Hello, John Doe!"</code></pre>
+<p>And now, our instance <code class="language-javascript">person1</code> can call the <code class="language-javascript">greet</code> method even though it wasn't defined in the original constructor. This is because the <code class="language-javascript">greet</code> method is added to the <code class="language-javascript">Person</code> prototype, and all instances of <code class="language-javascript">Person</code> share the same prototype methods.</p>
+<h5 id="classes">Classes</h5>
+<p>Classes are the new kids on the block in JavaScript. They have become a more modern and familiar way of defining object templates and establishing inheritance relationships with ES6. This is mostly attributed to the fact that, while prototypes are still essential, classes are viewed as having a more common readability among OOP developers. Aside from that, they both serve the same purpose: to define object templates in order to create instances based on them.</p>
+<p>Let's stick with the <code class="language-javascript">Person</code> template and check out how we define a <code class="language-javascript">class</code> in JavaScript: </p>
+<pre><code class="language-javascript">class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
+}</code></pre>
+<p>In the code above, we have defined our <code class="language-javascript">Person</code> class using the <code class="language-javascript">class</code> keyword. Then, inside curly braces, we added a <code class="language-javascript">constructor</code> method that accepts <code class="language-javascript">firstName</code> and <code class="language-javascript">lastName</code> as inputs. The <code class="language-javascript">constructor</code> is a special method that is called when you create a new instance (object) based on this class. Then we see <code class="language-javascript">getFullName</code> method defined within the class. As you've probably noticed, the syntax and structure are quite similar to using a function constructor with prototypes.</p>
+<p>Creating instances based on the class also follows the same syntax:</p>
+<pre><code class="language-javascript">let person1 = new Person("John", "Doe");
+
+// Accessing properties
+console.log(person1.firstName); // "John"
+console.log(person1.lastName);  // "Doe"
+
+// Calling the getFullName() method
+console.log(person1.getFullName()); // "John Doe"</code></pre>
+<p>When you want to extend the class by adding properties or methods, you can use the <code class="language-javascript">property</code> method in the same way:</p>
+<pre><code class="language-javascript">Person.prototype.greet = function() {
+  console.log('Hello, ' + this.firstName + ' ' + this.lastName + '!');
+};</code></pre>
+<p>This is because JavaScript is actually working with prototypes, although it uses class syntax.</p>
+<h5 id="subclasses">Subclasses</h5>
+<p>In JavaScript, you can create new classes that are similar to existing ones (the parent or <strong>superclass</strong>) but with extra features or modifications. These specialized types of extensions of classes are called <strong>subclasses</strong>, and they differ from simply adding extra features through prototyping.</p>
+<p>Subclasses can be created in JavaScript using both prototypes and classes, although the steps involved are slightly different. We use the <code class="language-javascript">extends</code> keyword to define a subclass in a class, but in a prototype, we manually set up the prototype chain and use child constructors to generate subclasses. You can create subtypes (child constructors or subclasses) that inherit and extend the behavior of their parent classes using either technique.</p>
+<p>When you define a new property or new method to the subclass, it means that this method is unique to the subclass itself. It won't be available in instances of the parent class or other subclasses. If you want those methods and properties to be shared among all instances of the parent class and its subclasses, you need to add them to the parent class (class scope).</p>
+<p>Let's create a subclass called <code class="language-javascript">Teacher</code> based on our parent function constructor and superclass <code class="language-javascript">Person</code> respectively:</p>
+<ul>
+<li><strong>Subclasses (child constructors) with Prototypes</strong></li>
+</ul>
+<pre><code class="language-javascript">function Teacher(firstName, lastName, subject) {
+    // Call the parent constructor
+    Person.call(this, firstName, lastName);
+    
+    // Add child-specific property
+    this.subject = subject;
+}</code></pre>
+<p>Here, we have a child constructor, <code class="language-javascript">Teacher</code>, derived from our parent function constructor, <code class="language-javascript">Person</code>. Inside the <code class="language-javascript">Teacher</code> constructor, we use the <code class="language-javascript">call</code> keyword as <code class="language-javascript">Person.call(this, firstName, lastName)</code> to make sure that when we create a new <code class="language-javascript">Teacher</code> object, it inherits all the properties and setup from the <code class="language-javascript">Person</code> constructor. It's like borrowing the <code class="language-javascript">Person</code>'s basic setup.</p>
+<p>Next, we need to set up this prototype chain of inheritance as follows:</p>
+<pre><code class="language-javascript">Teacher.prototype = Object.create(Person.prototype);
+Teacher.prototype.constructor = Teacher;</code></pre>
+<p>In the first line, we use <code class="language-javascript">Object.create</code> to create a new object that will inherit properties and methods from <code class="language-javascript">Person.prototype</code>, and we set this new object as the prototype for the <code class="language-javascript">Teacher.prototype</code> object. This connection means that <code class="language-javascript">Teacher.prototype</code> will receive features from <code class="language-javascript">Person.prototype</code>, so instances of the <code class="language-javascript">Teacher</code> class can access properties and methods from both <code class="language-javascript">Teacher.prototype</code> and <code class="language-javascript">Person.prototype</code>.</p>
+<p>In the second line, we're simply telling JavaScript that <code class="language-javascript">Teacher</code> is the constructor function for instances created from the <code class="language-javascript">Teacher</code> class. This is important when we create new objects (instances) that inherit features from <code class="language-javascript">Teacher.prototype</code> and <code class="language-javascript">Person.prototype</code>.</p>
+<ul>
+<li><strong>Subclasses with Classes</strong></li>
+</ul>
+<p>When we work with classes and want to create a subclass, we have a simpler syntax. To create a subclass named <code class="language-javascript">Teacher</code> based on the superclass (parent class) <code class="language-javascript">Person</code>, we use the <code class="language-javascript">extends</code> keyword. Within the constructor function, we use <code class="language-javascript">super</code> to access and invoke the parent class's constructor.</p>
+<p></p><div class="alert alert-warning">The <code class="language-javascript">extends</code> keyword is used to create a new class (a subclass) from an existing class (the superclass). It allows the new class to draw on the existing class's characteristics. The super keyword denotes the superclass in this case, and it is used within the constructor of a subclass. It invokes the superclass's constructor and allows the subclass to set up its own properties while also accessing the foundational behavior of the superclass. </div>
+<pre><code class="language-javascript">class Teacher extends Person {
+    constructor(firstName, lastName, subject) {
+        super(firstName, lastName); // Call the parent class constructor
+        this.subject = subject;
+    }
+}
+</code></pre>
+<p>We don't need any extra line of code to create or complete an inheritance linkage between superclass <code class="language-javascript">Person</code> and subclass <code class="language-javascript">Teacher</code> since <code class="language-javascript">super</code> allows us to establish this relationship between them.</p>
+<p>Lastly, if we want to set up prototypes of either this child class constructor or a subclass <code class="language-javascript">Teacher</code>, we use the syntax below:</p>
+<pre><code class="language-javascript">Teacher.prototype.teach = function() {
+    console.log(`${this.firstName} ${this.lastName} is teaching ${this.subject}`);
+};
+
+// Create instances
+const person1 = new Person("John", "Doe");
+const teacher1 = new Teacher("Jane", "Smith", "Math");
+
+console.log(person1.getFullName()); // "John Doe"
+console.log(teacher1.getFullName()); // "Jane Smith"
+teacher1.teach(); // "Jane Smith is teaching Math"
+</code></pre>
+<p>Here, in this code, we define a <code class="language-javascript">teach</code> method for the prototype of the <code class="language-javascript">Teacher</code> subclass, and it prints the teacher's name and the subject they are teaching. We have also two instances, <code class="language-javascript">person1</code> and <code class="language-javascript">teacher1</code>, and their full names are displayed. When you call <code class="language-javascript">teacher1.teach()</code>, it prints the message <code class="language-javascript">"Jane Smith is teaching Math"</code> in the console.</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>JavaScript uses both prototypes and the class syntax introduced in ES6 to create object templates in Object-Oriented Programming (OOP). The class syntax promotes OOP familiarity, however, it is primarily based on prototypes.</p>
+<p>Prototypes are built-in templates in JavaScript, generally utilizing function constructors, but ES6 classes offer a more organized syntax. Inheritance can be accomplished with either method. We can expand parent constructors and superclasses in more specialized ways, creating subclasses. With prototypes, you need to manually set up the prototype chain and use parent constructors. In contrast, ES6 classes simplify inheritance using the <code class="language-javascript">extends</code> keyword and <code class="language-javascript">super</code> method, making the process more straightforward and readable.</p>
+</div>

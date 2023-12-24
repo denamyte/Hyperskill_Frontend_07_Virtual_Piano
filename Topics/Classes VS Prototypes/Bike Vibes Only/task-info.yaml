@@ -1,0 +1,31 @@
+type: code
+custom_name: Bike Vibes Only!
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      class Vehicle {
+        constructor(brand, model) {
+          this.brand = brand;
+          this.model = model;
+        }
+      }
+      
+      class Bike extends Vehicle {
+       Vehicle.call(this, brand, model);
+          this.type = type;
+        }
+      
+        info() {
+          return `Bike: Brand - ${this.brand}, Model - ${this.model}, Type - ${this.type}`;
+        }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/35417#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sun, 24 Dec 2023 14:29:36 UTC"
+record: -1
+submission_language: javascript

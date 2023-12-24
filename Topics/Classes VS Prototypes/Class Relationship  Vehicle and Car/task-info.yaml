@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: Creating a subclass with a name <code>Car</code> that is based on a superclass
+      called <code>Vehicle</code>.
+  - text: Adding a property named <code>Vehicle</code> to the <code>Car</code> class.
+  - text: "Establishing inheritance, with <code>Car</code> inheriting from the <code>Vehicle</code>\
+    \ class."
+  - text: Assigning new values for <code>make</code> and <code>model</code> properties
+      inside the <code>Car</code> class.
+  - text: ' Defining a new instance of the <code>Car</code> class.'
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/35412#comment
+status: Solved
+record: -1
+custom_name: "Class Relationship: Vehicle and Car"
+local_check: false

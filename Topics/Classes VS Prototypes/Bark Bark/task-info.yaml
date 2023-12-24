@@ -1,0 +1,30 @@
+type: code
+custom_name: Bark Bark!
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      function Animal(name) {
+        this.name = name;
+      }
+      
+      Animal.prototype.makeSound = function() {
+        return "Animal sound";
+      };
+      
+      function Dog(name) {
+        Animal.call(this, name);
+      }
+      
+      Dog.extends.makeSound = function() {
+        return "Bark bark!";
+      };
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/35419#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sun, 24 Dec 2023 14:13:01 UTC"
+record: -1
+submission_language: javascript

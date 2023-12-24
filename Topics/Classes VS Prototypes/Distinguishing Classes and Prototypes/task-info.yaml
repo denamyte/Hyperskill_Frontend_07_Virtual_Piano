@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "Classes use constructor functions, while prototypes do not."
+  - text: "Compared to prototypes, classes provide a more familiar OOP syntax in JavaScript."
+  - text: Classes have completely replaced the use of prototypes with ES6 update in
+      JavaScript.
+  - text: "Classes allow for multiple layers of inheritance, while prototypes do not."
+  - text: JavaScript classes and prototypes have no differences in their syntax.
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/35413#comment
+status: Solved
+record: -1
+local_check: false
