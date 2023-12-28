@@ -1,0 +1,1 @@
+const matchTheWord = word => /tion/.test(word);
