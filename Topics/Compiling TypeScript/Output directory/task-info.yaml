@@ -1,0 +1,18 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: The directory where the TypeScript source files are located
+  - text: The directory where the compiled JavaScript files should be output
+  - text: The directory where the npm packages are located
+  - text: The directory where the tsconfig.json file is located
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/33793#comment
+status: Solved
+record: -1
+local_check: false

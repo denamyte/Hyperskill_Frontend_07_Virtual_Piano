@@ -1,0 +1,18 @@
+type: code
+custom_name: What's the output?
+files:
+  - name: main.js
+    visible: true
+    text: |-
+      // write your code below
+      function sum() {
+      
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/33789#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sun, 07 Jan 2024 14:38:36 UTC"
+record: -1
+submission_language: javascript

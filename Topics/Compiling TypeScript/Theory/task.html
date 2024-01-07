@@ -1,0 +1,86 @@
+<h2>Compiling TypeScript</h2>
+<div class="step-text">
+<p><strong>TypeScript</strong> is a statically typed superset of JavaScript that adds optional types, classes, and modules to the language, while also supporting the latest JavaScript features. However, browsers and Node.js (a popular JavaScript runtime) don't understand TypeScript directly. This is why TypeScript needs to be "compiled" (or, to be precise, <strong>transpiled</strong>) into JavaScript before it can be executed. In this topic, you will get a general overview of the compilation process in TypeScript and learn how to compile a TypeScript file.</p>
+<h5 id="typescript-compilation-process">TypeScript compilation process</h5>
+<ol>
+<li>
+<p><strong>Type-checking.</strong> TypeScript uses static typing which allows you to define the type of variables, function parameters, returned values, and object properties. During the compilation process, the TypeScript compiler (<code class="language-javascript">tsc</code>) will perform a type-check, verifying that the types specified in your code are being used correctly. If there are any type errors, the compiler will throw an error.</p>
+</li>
+<li>
+<p><strong>Transpilation.</strong> After the type-checking process, the TypeScript compiler will then convert (or "transpile") your TypeScript code into JavaScript. This process includes transforming TypeScript-specific features, like interfaces and type annotations, into JavaScript code that can be executed in a browser or Node.js environment. The TypeScript compiler can output different versions of JavaScript (ES5, ES6, etc.) depending on your configuration settings.</p>
+</li>
+</ol>
+<h5 id="how-to-compile-a-typescript-file">How to compile a TypeScript file</h5>
+<p>To compile TypeScript files, you'll need to have both Node.js and the TypeScript package installed on your machine. Let's look at each step:</p>
+<ol>
+<li>
+<p><strong>Install Node.js.</strong> Node.js is a JavaScript runtime that allows you to run JavaScript code on your machine. You can download it from the official <a href="https://nodejs.org/" rel="noopener noreferrer nofollow" target="_blank">website</a>. After downloading, follow the prompts to install it. You can also check if you have Node installed on your machine on a terminal or command prompt with this:</p>
+<pre><code class="language-no-highlight">node -v</code></pre>
+</li>
+<li>
+<p><strong>Install TypeScript.</strong> Once Node.js is installed, you can install TypeScript globally on your machine using npm (Node Package Manager), which comes with Node.js. Open a terminal or command prompt and type the following command:</p>
+<pre><code class="language-no-highlight">npm install -g typescript</code></pre>
+<p>The <code class="language-javascript">-g</code> flag means that TypeScript will be installed globally, and you can use it from anywhere on your machine. You need to use sudo or have admin permissions to use this flag.</p>
+</li>
+<li>
+<p><strong>Write TypeScript code.</strong> Create a new <code class="language-javascript">.ts</code> file and write some TypeScript code. For example, create a file called <code class="language-javascript">hello.ts</code> with the following code:</p>
+<pre><code class="language-javascript">function hello(name: string) {
+    console.log('Hello, ' + name + '!');
+}
+
+hello('TypeScript');</code></pre>
+<p><picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="Above script shown on the WebStorm IDE with the file manager on the left. The file is hello.ts" height="850" name="hellots.png" src="https://ucarecdn.com/063bf7a3-0858-414a-b2b4-ca0f6c7b18b1/" width="1396"/></picture></p>
+</li>
+<li>
+<p><strong>Compile TypeScript code.</strong> Now you can use the TypeScript compiler (<code class="language-javascript">tsc</code>) to compile your TypeScript code into JavaScript. In the terminal, navigate to the directory containing your <code class="language-javascript">hello.ts</code> file and type the following command:</p>
+<pre><code class="language-javascript">tsc hello.ts</code></pre>
+<p>If the above command doesn't work, try this one:</p>
+<pre><code class="language-javascript">npx tsc hello.ts</code></pre>
+<p> This will create a new file called <code class="language-javascript">hello.js</code> in the same directory, which contains the compiled JavaScript code.<br/>
+<picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="Result of  the above command on the WebStorm IDE with the file manager on the left. The command creates the file hello.js" height="1894" name="hellojs.png" src="https://ucarecdn.com/8b74062a-2c7d-4d11-8e22-49807787f676/" width="3024"/></picture></p>
+</li>
+<li>
+<p><strong>Run the JavaScript code.</strong> You can now run the compiled JavaScript code using Node.js:</p>
+<pre><code class="language-javascript">node hello.js</code></pre>
+<p>This will print "Hello, TypeScript!" to the console.</p>
+</li>
+</ol>
+<h5 id="tsconfigjson">TSConfig.json</h5>
+<p>The TypeScript compiler is controlled by a configuration file named <code class="language-javascript">tsconfig.json</code>. This file allows you to specify various options for the compiler, such as the JavaScript version to output (<code class="language-javascript">target</code>), whether to include source maps (<code class="language-javascript">sourceMap</code>), which files to include in the compilation (<code class="language-javascript">include</code>), and many other options. </p>
+<p></p><div class="alert alert-primary">Source maps are files that provide mapping between the original source code (e.g. TypeScript) and the corresponding transpiled code (e.g. JavaScript). They allow developers to debug and trace issues in the original source code, even when working with compiled code. Source maps are generated by the TypeScript compiler when the <code class="language-javascript">sourceMap</code> option is enabled in the <code class="language-javascript">tsconfig.json</code> file. They contain information about the original file structure, line numbers, and variable names. This mapping information is stored in a separate file with the extension <code class="language-javascript">.map</code> (e.g., <code class="language-javascript">main.js.map</code>).</div>
+<p>To generate a <code class="language-javascript">tsconfig.json</code> file with default settings, use this command:</p>
+<pre><code class="language-javascript">tsc --init</code></pre>
+<p>Here's a basic example of a <code class="language-javascript">tsconfig.json</code> file:</p>
+<pre><code class="language-json">{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+</code></pre>
+<p>Let's break down what each of these properties does:</p>
+<ul>
+<li>
+<p><code class="language-javascript">compilerOptions</code>: this property is where you specify various options that the compiler will use.</p>
+<ul>
+<li><code class="language-javascript">target</code>: specifies the output language level. In this case, it's "es5", but it could be "es6", "esnext", etc.</li>
+<li><code class="language-javascript">module</code>: specifies the module system to be used. "commonjs" is used for Node.js.</li>
+<li><code class="language-javascript">strict</code>: enables a wide range of type-checking behavior that results in more type-safe programs.</li>
+<li><code class="language-javascript">outDir</code>: the output directory for the JavaScript files that the TypeScript compiler will create.</li>
+</ul>
+</li>
+<li>
+<p><code class="language-javascript">include</code>: an array of glob patterns that match the files you want to include in your compilation.</p>
+</li>
+<li>
+<p><code class="language-javascript">exclude</code>: an array of glob patterns that match the files you want to exclude from your compilation.</p>
+</li>
+</ul>
+<p>There are many other options that you can use in your <code class="language-javascript">tsconfig.json</code> file, such as <code class="language-javascript">lib</code> (which allows you to specify library files to be included in the compilation), and <code class="language-javascript">jsx</code> (which specifies JSX code generation). For more detailed information about the various options available in a <code class="language-javascript">tsconfig.json</code> file, you can refer to the official TypeScript <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html" rel="noopener noreferrer nofollow" target="_blank">documentation</a>.</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>TypeScript is a tool to make JavaScript development safer and more efficient, but the resulting application that runs in the end is pure JavaScript. To compile TypeScript, you need to have Node.js and TypeScript package installed. After that, you can compile TypeScript and run the generated JavaScript file. You may also need to use the <code class="language-javascript">tsconfig.json</code> file to configure the TypeScript compiler.</p>
+</div>
