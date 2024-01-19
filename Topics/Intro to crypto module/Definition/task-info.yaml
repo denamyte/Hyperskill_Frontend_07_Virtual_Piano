@@ -1,0 +1,20 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "A method of protecting information through the use of codes, so that only\
+    \ intended receivers can read and process it."
+  - text: A formula or procedure that converts a plaintext message into an encrypted
+      ciphertext.
+  - text: A piece of random data added to a password before it is hashed and stored.
+  - text: A piece of information or parameter that is used to encrypt and decrypt messages.
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29260#comment
+status: Solved
+record: -1
+local_check: false

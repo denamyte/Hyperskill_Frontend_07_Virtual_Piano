@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: ' It returns a promise that resolves with the value returned by the function.'
+  - text: It replaces callback functions
+  - text: It waits for a promise to resolve before moving on to the next line of code.
+  - text: It makes synchronous programming more manageable
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/27935#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Fri, 19 Jan 2024 20:25:20 UTC"
+record: -1
+selected_options:
+  - 2
+local_check: false

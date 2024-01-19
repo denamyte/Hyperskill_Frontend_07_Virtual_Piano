@@ -1,0 +1,23 @@
+type: sorting
+options:
+  - "};"
+  - "<code>let encrypted = cipher.update(message, 'utf-8', 'latin1');</code>"
+  - "<code>let cipher = crypto.createCipheriv(algo, key, iv);</code>"
+  - "<code>const encrypt = (algo, key, iv, message) =&gt; {</code>"
+  - <code>return encrypted += cipher.final('latin1');</code>
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29268#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4

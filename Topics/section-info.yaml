@@ -18,3 +18,5 @@ content:
   - String Compare
   - Introduction to Regexp
   - Compiling TypeScript
+  - Intro to crypto module
+  - Async await
