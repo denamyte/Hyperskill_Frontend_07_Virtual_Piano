@@ -1,0 +1,24 @@
+<h2>Resolving multiple promises in JavaScript</h2>
+<div class="step-text">
+<div class="alert alert-warning">Hey there! This problem might be a bit unpredictable, but give it a go and let us know how you do!</div>Consider the example below: <pre><code class="javascript">let condition1 = true;
+let condition2 = false;
+
+let promise1 = new Promise(function(resolve, reject) {
+  if(condition1) {
+    resolve('Promise1 resolved!');
+  } else {
+    reject('Error in promise1! Condition1 was not met.');
+  }
+});
+
+let promise2 = new Promise(function(resolve, reject) {
+  if(condition2) {
+    resolve('Promise2 resolved!');
+  } else {
+    reject('Error in promise2! Condition2 was not met.');
+  }
+});
+
+Promise.all([promise1, promise2]).then(alert).catch(alert);
+</code></pre> What will be the output if the 'condition1' variable is true and 'condition2' is false?
+</div>

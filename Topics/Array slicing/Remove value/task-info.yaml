@@ -1,0 +1,17 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      function newRemove(array, index, n) {
+          return ...; // Enter your code in place of ... and use slice and concat
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16372#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Mon, 22 Jan 2024 13:10:33 UTC"
+record: -1
+submission_language: javascript

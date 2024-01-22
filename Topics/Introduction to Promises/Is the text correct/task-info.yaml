@@ -1,0 +1,17 @@
+type: code
+custom_name: Is the text correct?
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      const checkingText = (status) => {
+          // write your code here
+      
+      
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/9986#comment
+status: Failed
+record: -1
+submission_language: javascript

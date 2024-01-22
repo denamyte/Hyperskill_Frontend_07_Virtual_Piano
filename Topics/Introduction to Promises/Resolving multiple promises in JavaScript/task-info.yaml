@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: An error will occur due to incorrect Promise initialization.
+  - text: '&#x27;Error in promise2! Condition2 was not met.&#x27; will be alerted to
+    the user.'
+  - text: Only &#x27;Promise1 resolved!&#x27; will be alerted to the user.
+  - text: '&#x27;Promise1 resolved!&#x27; and &#x27;Promise2 resolved!&#x27; will be
+    alerted to the user.'
+  - text: '&#x27;Error in promise1! Condition1 was not met.&#x27; and &#x27;Error in
+    promise2! Condition2 was not met.&#x27; will be alerted.'
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/33500#comment
+status: Solved
+record: -1
+local_check: false
