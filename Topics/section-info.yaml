@@ -21,3 +21,5 @@ content:
   - Intro to crypto module
   - Async await
   - Introduction to Promises
+  - setTimeout and setInterval
+  - For...of loop

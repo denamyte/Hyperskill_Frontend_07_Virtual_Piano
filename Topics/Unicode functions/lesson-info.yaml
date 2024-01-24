@@ -6,3 +6,6 @@ content:
   - Unicode address of a character
   - What's the secret message
   - String to a Unicode code points array
+  - Surrogate pairs
+  - String.fromCodePoint() vs String.fromCharCode()
+  - Surrogate pair check

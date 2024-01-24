@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "&#x27;Hello&#x27; appears every 3 seconds, &#x27;Goodbye&#x27; appears every\
+    \ 2 seconds."
+  - text: '&#x27;Hello&#x27; appears once right after the code execution and &#x27;Goodbye&#x27;
+    appears every 2 seconds afterwards.'
+  - text: "&#x27;Hello&#x27; appears once after 3 seconds, then &#x27;Goodbye&#x27;\
+    \ appears every 2 seconds."
+  - text: "&#x27;Goodbye&#x27; appears once after 2 seconds, then &#x27;Hello&#x27;\
+    \ appears every 3 seconds."
+  - text: '&#x27;Hello&#x27; and &#x27;Goodbye&#x27; both appear every 2 seconds.'
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/34724#comment
+status: Unchecked
+record: -1
+local_check: false
