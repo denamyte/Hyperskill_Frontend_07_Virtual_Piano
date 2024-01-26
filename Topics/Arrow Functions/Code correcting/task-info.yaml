@@ -1,0 +1,15 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    text: |-
+      let someFunc = (k, l, m) = k + l + m;
+      someFunc();
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8462#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Fri, 26 Jan 2024 17:36:43 UTC"
+record: -1
+submission_language: javascript

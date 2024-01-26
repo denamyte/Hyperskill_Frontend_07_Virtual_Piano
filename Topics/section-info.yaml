@@ -23,3 +23,6 @@ content:
   - Introduction to Promises
   - setTimeout and setInterval
   - For...of loop
+  - Array iterating
+  - Arrow Functions
+  - For ... in for Objects

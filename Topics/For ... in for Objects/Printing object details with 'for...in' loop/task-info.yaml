@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "<pre><code class=\"language-javascript\">console.log(key + ': ' + car[key]);</code></pre>"
+  - text: "<pre><code class=\"language-javascript\">console.log(key + ': ' + car.value);</code></pre>"
+  - text: <pre><code class="language-javascript">console.log(key + ':' + value);</code></pre>
+  - text: "<pre><code class=\"language-javascript\">console.log(key : car[key]);</code></pre>"
+  - text: "<pre><code class=\"language-javascript\">console.log(key + ': ' + car.key);</code></pre>"
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/34077#comment
+status: Unchecked
+record: -1
+local_check: false

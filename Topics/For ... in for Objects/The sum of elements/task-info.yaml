@@ -1,0 +1,13 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    text: "let data = [11, 5, 29, 75];"
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/22789#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Fri, 26 Jan 2024 17:47:29 UTC"
+record: -1
+submission_language: javascript
