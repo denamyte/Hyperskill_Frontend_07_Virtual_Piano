@@ -9,3 +9,4 @@ content:
   - Surrogate pairs
   - String.fromCodePoint() vs String.fromCharCode()
   - Surrogate pair check
+  - Hello summer
