@@ -1,0 +1,26 @@
+type: sorting
+options:
+  - "<code>});</code>"
+  - <code>console.log(data);</code>
+  - <code>if (err) throw err;</code>
+  - "<code>const data = fs.readFile('../paper.txt', 'utf-8', (err, data) =&gt; {</code>"
+  - <code>const fs = require('node:fs');</code>
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/25763#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Sat, 03 Feb 2024 16:17:41 UTC"
+record: -1
+ordering:
+  - 4
+  - 3
+  - 2
+  - 1
+  - 0
