@@ -1,0 +1,81 @@
+<h2>Path traversal</h2>
+<div class="step-text">
+<p>Node.js has empowered developers to create dynamic and responsive web applications, but with great opportunities come serious responsibilities, especially when it comes to security. In the realm of Node.js security, one crucial aspect to understand is "Path Traversal." This vulnerability can pose significant risks to your application's security by allowing attackers to sneak into sensitive areas of your file system. In this topic, we'll delve into the concept of path traversal, exploring its implications, common vulnerabilities, and how to mitigate the associated risks in your Node.js applications.</p>
+<h5 id="path-traversal">Path traversal</h5>
+<p>Picture your web application as a house with different rooms representing directories and files. Path traversal, also known as directory traversal, occurs when an attacker finds a sneaky way to navigate through these rooms beyond the intended boundaries. It's like someone gaining access to your private files by exploiting weaknesses in your application's security.</p>
+<p>Path traversal, also known as a dot-dot-slash attack, is a security vulnerability that occurs when an application allows an attacker to navigate through the file system beyond the intended directory. In Node.js, this could mean an unauthorized user gaining access to sensitive files, such as configuration files, databases, or even executable scripts.</p>
+<h5 id="common-vulnerabilities">Common vulnerabilities</h5>
+<p>Let's break down why path traversal happens and how attackers exploit it. Often, it boils down to inadequate checks on user inputs. Imagine you have a system that allows users to download files, and your server code looks something like this:</p>
+<pre><code class="language-javascript">const fs = require('fs');
+const path = '/uploads/';
+
+app.get('/download', (req, res) =&gt; {
+  const fileName = req.query.fileName;
+  const filePath = path + fileName;
+
+  // Insecure code: No input validation
+  fs.readFile(filePath, (err, data) =&gt; {
+    if (err) {
+      res.status(500).send('Error reading file');
+    } else {
+      res.send(data);
+    }
+  });
+});
+</code></pre>
+<p>The above code snippet is vulnerable to directory traversal attacks. In the current implementation, there is no validation or sanitization of the <code class="language-javascript">fileName</code> parameter obtained from the query string. An attacker could manipulate the <code class="language-javascript">fileName</code> to traverse the file system and potentially access sensitive files on the server. Here, an attacker could craft a request with <code class="language-javascript">fileName</code> containing <code class="language-javascript">../../../../../etc/passwd</code>, allowing them to access sensitive system files.</p>
+<p>To fix this vulnerability, you should perform proper input validation and sanitize the <code class="language-javascript">fileName</code> before constructing the file path. One way to do this is to ensure that the <code class="language-javascript">fileName</code> only contains allowed characters and does not include any directory traversal sequences (like <code class="language-javascript">../</code>). Here's an example of how you can achieve this using a simple regular expression:</p>
+<pre><code class="language-javascript">const fs = require('fs');
+const path = '/uploads/';
+
+app.get('/download', (req, res) =&gt; {
+  const fileName = req.query.fileName;
+
+  // Validate and sanitize the fileName
+  if (!/^[a-zA-Z0-9_-]+$/.test(fileName)) {
+    res.status(400).send('Invalid fileName');
+    return;
+  }
+
+  const filePath = path + fileName;
+
+  fs.readFile(filePath, (err, data) =&gt; {
+    if (err) {
+      res.status(500).send('Error reading file');
+    } else {
+      res.send(data);
+    }
+  });
+});
+</code></pre>
+<p>In this example, the regular expression <code class="language-javascript">^[a-zA-Z0-9_-]+$</code> ensures that the <code class="language-javascript">fileName</code> only contains letters (both upper and lower case), numbers, underscores, and hyphens. You may adjust the regular expression based on your specific requirements for valid file names.</p>
+<p>Remember that input validation is just one layer of defense, and you should also consider using other security measures, such as proper file permissions, to protect against potential attacks.</p>
+<h5 id="mitigating-path-traversal">Mitigating path traversal</h5>
+<p>To enhance the security of your Node.js applications against path traversal attacks, follow these best practices:</p>
+<ul>
+<li><strong>Input Validation:</strong> Imagine your application as a security guard at a club entrance. Before letting anyone in, the guard checks IDs to ensure only authorized guests get access. Similarly, validate and sanitize user inputs before constructing file paths. Only allow known and safe inputs through the door.</li>
+<li><strong>Use Path Module:</strong> Node.js comes with a superhero called the <code class="language-javascript">path</code> module. It helps you handle file paths more safely. The <code class="language-javascript">path.normalize()</code> method, for example, ensures that paths are in a standard format, like, a security guard ensuring everyone follows the rules.</li>
+<li><strong>Restricted Access:</strong> Now, think of your directories and files as VIP areas in your club. Implement access controls to specify who gets into which area. Set up permissions to restrict unauthorized access. It's like having a velvet rope to keep out unwanted guests.</li>
+</ul>
+<pre><code class="language-javascript">// Secure code: Use path module and restrict access
+
+const path = require('path');
+
+app.get('/download', (req, res) =&gt; {
+  const fileName = req.query.fileName;
+
+  const normalizedPath = path.normalize(fileName);
+  const safePath = path.join('/uploads/', normalizedPath);
+
+  fs.readFile(safePath, (err, data) =&gt; {
+    if (err) {
+      res.status(500).send('Error reading file');
+    } else {
+      res.send(data);
+    }
+  });
+});
+</code></pre>
+<h5 id="conclusion">Conclusion</h5>
+<p>Path traversal is a significant security concern in Node.js applications that can lead to unauthorized access and compromise sensitive data. By understanding the vulnerabilities associated with path traversal and adopting best practices like input validation, using the <code class="language-javascript">path</code> module, and implementing restricted access, developers can fortify their applications against potential attacks. Prioritize security in your Node.js development journey to build robust and resilient web applications.</p>
+</div>

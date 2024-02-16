@@ -1,0 +1,6 @@
+<h2>Path building</h2>
+<div class="step-text">
+<p></p>
+<p>You are tasked with enhancing a file path building function to prevent path traversal vulnerabilities. Implement a function that takes a base path and a file name, validates the file name, and constructs a secure file path.</p>
+<p></p><div class="alert alert-primary">If the file name contains <code class="java">..</code> then log "Error" on the console otherwise construct the secure path as shown in the sample output.</div><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">/uploads<br>example.txt</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Secure File Path: /uploads/example.txt</code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">/uploads<br>../../etc/passwd</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Error</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 15 seconds</font><br><br>
+</div>

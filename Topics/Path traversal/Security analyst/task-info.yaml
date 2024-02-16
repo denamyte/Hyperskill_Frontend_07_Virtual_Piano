@@ -1,0 +1,15 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      // Function to detect path traversal
+      function detectPathTraversal(filePath) {
+      
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/40849#comment
+status: Unchecked
+record: -1
+submission_language: javascript
