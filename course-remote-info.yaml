@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://cogniterra.org/media/attachments/lesson/24793/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Fri, 16 Feb 2024 14:20:13 UTC"
+update_date: "Mon, 26 Feb 2024 15:07:55 UTC"
 stages:
   - id: 556
     step: 9022
@@ -69,10 +69,10 @@ topics:
       theory_id: 8325
     - title: Border
       theory_id: 8355
-    - title: Links
-      theory_id: 11834
     - title: RGB
       theory_id: 8819
+    - title: Links
+      theory_id: 11834
     - title: Colors in CSS
       theory_id: 7973
   2:

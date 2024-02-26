@@ -29,3 +29,4 @@ content:
   - Introduction to fs module
   - Date
   - Path traversal
+  - Readline module
