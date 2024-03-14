@@ -1,0 +1,30 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      const crypto = require('crypto');
+      
+      const password1 = 'joe123';
+      const password2 = 'joe123';
+      
+      const createHash = (password) => {
+        return new Promise((resolve, reject) => {
+            const salt = /* write your code here */
+            crypto.scrypt(password, 'yourSalt', 64, (err, result) => {
+               if (err) {
+                   reject(err);
+               }
+               resolve(result.toString('hex'));
+            });
+         });
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29265#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 14 Mar 2024 13:00:25 UTC"
+record: -1
+submission_language: javascript
