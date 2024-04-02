@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "Readable, Writable, Common, Transform"
+  - text: "Duplex, Readable, Writable, Transform"
+  - text: "Transform, Duplex, Piping, Readable"
+  - text: "Writable, Duplex, Rewritable, Piping"
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29388#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Tue, 02 Apr 2024 07:35:51 UTC"
+record: -1
+selected_options:
+  - 1
+local_check: false

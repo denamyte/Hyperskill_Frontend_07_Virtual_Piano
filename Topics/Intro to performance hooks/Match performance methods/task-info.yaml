@@ -1,0 +1,24 @@
+type: matching
+captions:
+  - <code>performance.measure()</code>
+  - <code>performance.mark()</code>
+  - <code>performance.getEntriesByName()</code>
+options:
+  - This method returns an array of performance entries with a specific name.
+  - This method allows you to create a named performance mark in your code.
+  - This method creates a named performance measure that represents the duration between
+    two marks.
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/40618#comment
+status: Solved
+record: -1
+ordering:
+  - 0
+  - 1
+  - 2

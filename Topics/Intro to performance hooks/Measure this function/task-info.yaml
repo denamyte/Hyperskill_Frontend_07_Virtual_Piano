@@ -1,0 +1,21 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      const { performance } = require('perf_hooks');
+      
+      let start = /* assign this */
+      toMeasure().then(() => {
+        let end = /* assign this */
+        // write your code here
+      });
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/40622#comment
+status: Solved
+feedback:
+  message: "<html>Passed. Your duration: 2003.8301010131836</html>"
+  time: "Tue, 02 Apr 2024 07:08:07 UTC"
+record: -1
+submission_language: javascript

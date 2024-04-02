@@ -1,0 +1,16 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: "const fs = require(\"fs\"); \n\nfunction main() {\n    const readerStream\
+    \ = fs.createReadStream('./data.txt'); \n\n    readerStream.on('data', (chunk)\
+    \ => {\n        console.log(chunk)\n    })\n};"
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29395#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Tue, 02 Apr 2024 07:39:47 UTC"
+record: -1
+submission_language: javascript

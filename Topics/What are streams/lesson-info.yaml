@@ -1,0 +1,13 @@
+custom_name: What are streams?
+content:
+  - Theory
+  - Types of streams
+  - The truth about streams
+  - Words and their definitions
+  - Special event
+  - Event emitters
+  - The size of chunk
+  - "Open, print, close"
+  - We need strings
+  - Readable stream
+  - Size of chunk

@@ -1,0 +1,16 @@
+type: code
+files:
+  - name: main.js
+    visible: true
+    highlight_level: NONE
+    text: |-
+      const fs = require('fs');
+      
+      function reader() {
+          const readStream = /* your code */
+      };
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29396#comment
+status: Unchecked
+record: -1
+submission_language: javascript

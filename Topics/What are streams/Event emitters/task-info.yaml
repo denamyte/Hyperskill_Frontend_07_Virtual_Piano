@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: These entities are not related in any way
+  - text: All streams are instances of EventEmitter
+  - text: EventEmitter is an instance of one of the stream types
+  - text: Only readable streams are EventEmitter instances
+files:
+  - name: main.js
+    visible: true
+    text: |+
+      // You can experiment here, it won’t be checked
+    
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/29392#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Tue, 02 Apr 2024 07:38:40 UTC"
+record: -1
+selected_options:
+  - 1
+local_check: false

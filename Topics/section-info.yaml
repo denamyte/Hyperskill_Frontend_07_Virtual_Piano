@@ -30,3 +30,5 @@ content:
   - Date
   - Path traversal
   - Readline module
+  - Intro to performance hooks
+  - What are streams
