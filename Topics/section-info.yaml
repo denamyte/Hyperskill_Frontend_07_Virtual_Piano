@@ -32,3 +32,4 @@ content:
   - Readline module
   - Intro to performance hooks
   - What are streams
+  - Buffer module
